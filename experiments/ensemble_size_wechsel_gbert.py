@@ -51,7 +51,7 @@ def get_predictions(
         n_log_steps=10,
 ):
     EXPERIMENT_NAME = f'ensemble_{model_name}'
-    EXPERIMENT_DIR = f'../experiments/{EXPERIMENT_NAME}'
+    EXPERIMENT_DIR = f'cache/{EXPERIMENT_NAME}'
 
     # store predictions in dataframe
     # columns: Sentence, Prediction of Model 1, Prediction of Model 2, ...

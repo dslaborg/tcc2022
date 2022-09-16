@@ -37,7 +37,7 @@ TEST_BATCH_SIZE = 16
 N_EVAL_STEPS = 28
 
 EXPERIMENT_NAME = 'sub_ensemble_wechsel_gbert'
-EXPERIMENT_DIR = f'../experiments/{EXPERIMENT_NAME}'
+EXPERIMENT_DIR = f'cache/{EXPERIMENT_NAME}'
 
 os.makedirs(f'{EXPERIMENT_DIR}/models/wechsel', exist_ok=True)
 os.makedirs(f'{EXPERIMENT_DIR}/models/mlp', exist_ok=True)

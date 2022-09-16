@@ -41,7 +41,7 @@ VALID_BATCH_SIZE = 16
 N_EVAL_STEPS = 23
 
 EXPERIMENT_NAME = f'ensemble_{MODEL_NAME}'
-EXPERIMENT_DIR = f'../experiments/{EXPERIMENT_NAME}'
+EXPERIMENT_DIR = f'cache/{EXPERIMENT_NAME}'
 
 df_train, feature_columns = load_dataset_with_features('training')
 
