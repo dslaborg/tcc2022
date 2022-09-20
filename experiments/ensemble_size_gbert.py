@@ -1,5 +1,7 @@
 import hashlib
 import os
+import sys
+from os.path import realpath, join, dirname
 
 import numpy as np
 import pandas as pd
@@ -17,6 +19,8 @@ from transformers import (
     AutoModelForSequenceClassification,
     set_seed,
 )
+
+sys.path.insert(0, realpath(join(dirname(__file__), '..')))
 
 from util.helpers import (
     compute_metrics,
