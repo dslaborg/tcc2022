@@ -1,5 +1,7 @@
 import hashlib
 import os
+import sys
+from os.path import realpath, join, dirname
 
 import numpy as np
 import pandas as pd
@@ -17,6 +19,8 @@ from transformers import (
     AutoModelForSequenceClassification,
     set_seed,
 )
+
+sys.path.insert(0, realpath(join(dirname(__file__), '..')))
 
 from util.helpers import (
     compute_metrics,
@@ -51,7 +55,7 @@ def get_predictions(
         n_log_steps=10,
 ):
     EXPERIMENT_NAME = f'ensemble_{model_name}'
-    EXPERIMENT_DIR = f'../experiments/{EXPERIMENT_NAME}'
+    EXPERIMENT_DIR = f'cache/{EXPERIMENT_NAME}'
 
     # store predictions in dataframe
     # columns: Sentence, Prediction of Model 1, Prediction of Model 2, ...

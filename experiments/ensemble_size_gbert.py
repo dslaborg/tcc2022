@@ -1,5 +1,7 @@
 import hashlib
 import os
+import sys
+from os.path import realpath, join, dirname
 
 import numpy as np
 import pandas as pd
@@ -17,6 +19,8 @@ from transformers import (
     AutoModelForSequenceClassification,
     set_seed,
 )
+
+sys.path.insert(0, realpath(join(dirname(__file__), '..')))
 
 from util.helpers import (
     compute_metrics,
@@ -41,7 +45,7 @@ VALID_BATCH_SIZE = 16
 N_EVAL_STEPS = 23
 
 EXPERIMENT_NAME = f'ensemble_{MODEL_NAME}'
-EXPERIMENT_DIR = f'../experiments/{EXPERIMENT_NAME}'
+EXPERIMENT_DIR = f'cache/{EXPERIMENT_NAME}'
 
 df_train, feature_columns = load_dataset_with_features('training')
 

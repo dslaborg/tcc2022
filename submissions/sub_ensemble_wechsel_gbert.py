@@ -1,5 +1,7 @@
 import hashlib
 import os
+import sys
+from os.path import realpath, join, dirname
 
 import numpy as np
 import pandas as pd
@@ -16,6 +18,8 @@ from transformers import (
     AutoModelForSequenceClassification,
     set_seed,
 )
+
+sys.path.insert(0, realpath(join(dirname(__file__), '..')))
 
 from util.helpers import (
     load_dataset_with_features, get_hugging_face_name, TCCDataset, RegressionTrainer, compute_metrics_for_regression,
@@ -37,9 +41,8 @@ TEST_BATCH_SIZE = 16
 N_EVAL_STEPS = 28
 
 EXPERIMENT_NAME = 'sub_ensemble_wechsel_gbert'
-EXPERIMENT_DIR = f'../experiments/{EXPERIMENT_NAME}'
+EXPERIMENT_DIR = f'cache/{EXPERIMENT_NAME}'
 
-os.makedirs(f'{EXPERIMENT_DIR}/models/wechsel', exist_ok=True)
 os.makedirs(f'{EXPERIMENT_DIR}/models/mlp', exist_ok=True)
 os.makedirs(f'{EXPERIMENT_DIR}/predictions', exist_ok=True)
 
