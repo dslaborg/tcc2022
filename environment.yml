@@ -1,0 +1,28 @@
+# To update the environment use:
+# conda env update --file environment.yml --prune
+name: tcc2022
+channels:
+  - pytorch
+  - huggingface
+  - defaults
+dependencies:
+  - python=3.9
+  - pip
+  - numpy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - jupyter # jupyter
+  - ipython # jupyter
+  - pylint # jupyter
+  - invoke # jupyter
+  - ipywidgets # jupyter
+  - cudatoolkit
+  - pytorch
+  - torchvision
+  - torchaudio
+  - tensorflow
+  - transformers
+  - pip:
+    - tbparse
+    - black # formatter
