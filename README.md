@@ -36,3 +36,26 @@ To install the given conda environment use the following command:
 ```sh
 conda env create -f environment.yml
 ```
+
+## Academic citation
+
+Please use the following citation when referencing this software:
+
+Patrick Gustav Blaneck, Tobias Bornheim, Niklas Grieger, and Stephan Bialonski. 2022. [Automatic Readability Assessment of German Sentences with Transformer Ensembles](https://aclanthology.org/2022.germeval-1.10). In Proceedings of the GermEval 2022 Workshop on Text Complexity Assessment of German Text, pages 57–62, Potsdam, Germany. Association for Computational Linguistics.
+
+```
+@inproceedings{blaneck2022,
+    title = "Automatic Readability Assessment of {G}erman Sentences with Transformer Ensembles",
+    author = "Blaneck, Patrick Gustav  and
+      Bornheim, Tobias  and
+      Grieger, Niklas  and
+      Bialonski, Stephan",
+    booktitle = "Proceedings of the GermEval 2022 Workshop on Text Complexity Assessment of German Text",
+    month = sep,
+    year = "2022",
+    address = "Potsdam, Germany",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.germeval-1.10",
+    pages = "57--62",
+}
+```
