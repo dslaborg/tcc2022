@@ -1,28 +1,34 @@
 # To update the environment use:
 # conda env update --file environment.yml --prune
-name: tcc2022
+name: germeval2022
 channels:
   - pytorch
   - huggingface
   - defaults
 dependencies:
   - python=3.9
+  - git
   - pip
   - numpy
   - pandas
   - matplotlib
   - scikit-learn
-  - jupyter # jupyter
-  - ipython # jupyter
-  - pylint # jupyter
-  - invoke # jupyter
-  - ipywidgets # jupyter
   - cudatoolkit
   - pytorch
   - torchvision
   - torchaudio
   - tensorflow
-  - transformers
+  - keras
+  - tensorflow-gpu
+  - jupyter # jupyter
+  - ipython # jupyter
+  - pylint # jupyter
+  - invoke # jupyter
+  - ipywidgets # jupyter
   - pip:
+    - transformers
     - tbparse
-    - black # formatter
+    - git+https://github.com/andreasvc/readability
+    - syntok
+    - stanza
+    - textcomplexity
