@@ -175,8 +175,8 @@ def get_predictions(
             np.random.seed(k)
             mlp = Sequential(
                 [
-                    Input(shape=(1600 + len(feature_columns),), name='input'),
-                    Dense(1600, activation='relu', name='layer1'),
+                    Input(shape=(model.config.hidden_size + len(feature_columns),), name='input'),
+                    Dense(model.config.hidden_size, activation='relu', name='layer1'),
                     Dense(1, activation='linear', name='layer2'),
                 ]
             )
